@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Sayan Nandi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="bg"></canvas><div class="glow"></div><div class="progress"></div><div id="curtain"></div>
+<nav>
+  <a class="logo" href="index.html">SN<span>.</span></a>
+  <button class="burger" aria-label="Menu">☰</button>
+  <ul class="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<main>
+  <p class="eyebrow reveal">Selected work</p>
+  <h2 class="title reveal d1">My <span class="grad">Projects</span></h2>
+  <p class="sub reveal d2">Agents, RAG pipelines and ML apps, from research to deployment.</p>
+
+  <div class="filters reveal d2">
+    <button class="on" data-f="all">All</button>
+    <button data-f="agents">AI Agents</button>
+    <button data-f="ml">Machine Learning</button>
+    <button data-f="web">Web App</button>
+  </div>
+
+  <div class="grid g2">
+    <!-- Replace each "#" with your real GitHub / live links -->
+    <article class="card proj reveal" data-cat="agents web" data-tilt>
+      <p class="meta">September 2026</p>
+      <h3>ResearchMind: AI Research Assistant</h3>
+      <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Groq</span><span class="tag">Tavily</span><span class="tag">Streamlit</span></div>
+      <ul>
+        <li>Multi-agent pipeline (search agent, reader agent, writer chain, critic chain) that turns any topic into a sourced, structured research report with an automated quality score.</li>
+        <li>Integrated Tavily search and BeautifulSoup scraping as agent tools, with output caps, retry logic and recursion limits to handle Groq rate limits reliably.</li>
+      </ul>
+      <div class="btns"><a class="btn" href="#" target="_blank">Code ↗</a></div>
+    </article>
+
+    <article class="card proj reveal d1" data-cat="agents web" data-tilt>
+      <p class="meta">October 2026</p>
+      <h3>AI Video Agent</h3>
+      <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Groq</span><span class="tag">Whisper</span><span class="tag">ChromaDB</span><span class="tag">Streamlit</span></div>
+      <ul>
+        <li>Converts YouTube links and uploaded audio/video (English and Hinglish) into transcripts, summaries, action items, key decisions and open questions.</li>
+        <li>Pipeline built with yt-dlp, FFmpeg, local Whisper and LangChain chains on Groq LLMs, using map-reduce summarization for long recordings, plus RAG chat over each transcript with Hugging Face embeddings and ChromaDB.</li>
+        <li>Animated Streamlit app with live progress tracker, tabbed results, report download and rate-limit handling; code published on GitHub.</li>
+      </ul>
+      <div class="btns"><a class="btn" href="#" target="_blank">Code ↗</a></div>
+    </article>
+
+    <article class="card proj reveal d2" data-cat="ml web" data-tilt>
+      <p class="meta">August 2026</p>
+      <h3>NYC Airbnb Room Type Predictor</h3>
+      <div class="tags"><span class="tag">Random Forest</span><span class="tag">FastAPI</span><span class="tag">Pydantic</span><span class="tag">HTML/CSS/JS</span><span class="tag">Render</span></div>
+      <ul>
+        <li>Predicts the room type you are likely to get from inputs such as location, pricing and stay, reviews and host, and availability.</li>
+        <li>HTML, CSS and JavaScript frontend with a FastAPI backend, deployed on Render.</li>
+      </ul>
+      <div class="btns"><a class="btn" href="#" target="_blank">Code ↗</a></div>
+    </article>
+
+    <article class="card proj reveal d3" data-cat="ml" data-tilt>
+      <p class="meta">RAISR-2026 · Publication</p>
+      <h3>AI Decision Support for Urban Air Quality</h3>
+      <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Decision Support</span></div>
+      <ul><li>An AI-based decision support ecosystem for urban air quality management, published at RAISR-2026.</li></ul>
+    </article>
+  </div>
+</main>
+<footer>© <span id="year"></span> Sayan Nandi · Kolkata, West Bengal</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
